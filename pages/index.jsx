@@ -17,6 +17,24 @@ const ImageComponent = ({ src, height, width, alt }) => (
     />
 )
 
+const VideoPreview = ({ site, videoId }) => {
+    const embedUrl = `https://${site}/${videoId}`;
+
+    return (
+        <div>
+            <iframe
+                width="380"
+                height="220"
+                src={embedUrl}
+                allow='autoplay; fullscreen'
+                allowFullScreen
+                title="Video Preview"
+                frameBorder="0"
+            ></iframe>
+        </div>
+    )
+}
+
 export default function Home() {
     return (
         <div className={styles.container}>
@@ -40,21 +58,24 @@ export default function Home() {
 
             <main>
                 <div className={styles.grid}>
-                    <a href='' className={styles.card}>
+                    <div className={styles.card}>
                         <h3>Art Director Reel &rarr;</h3>
+                        <VideoPreview site={'player.vimeo.com/video'} videoId={'385735700'} />
                         <p>art direction &bull; team management &bull; vfx &bull; story boarding &bull; pre-production &bull; compositing</p>
-                    </a>
+                    </div>
 
-                    <a href='' className={styles.card}>
+                    <div className={styles.card}>
                         <h3>Animation Reel &rarr;</h3>
+                        <VideoPreview site={'www.youtube.com/embed'} videoId={'0oXn7zg0Z10'} />
                         <p>art direction &bull; management &bull; design &bull; rough animation</p>
-                    </a>
+                    </div>
 
-                    <a href='' className={styles.card}>
+                    <div className={styles.card}>
                         <h3>3D Modeling Reel &rarr;</h3>
+                        <VideoPreview site={'www.youtube.com/embed'} videoId={'0S_9RdObff8'} />
                         <p>
                             art direction &bull; concept &bull; 3D modeling &bull; texturing &bull; rigging &bull; 3D animation &bull; game design &bull; implementation &bull; system design</p>
-                    </a>
+                    </div>
                 </div>
             </main >
         </div>

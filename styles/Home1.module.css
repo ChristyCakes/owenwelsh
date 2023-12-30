@@ -28,11 +28,14 @@
 
 .nav {
   flex-direction: row;
-  padding: 10px;
+  padding: 2rem;
 }
 
 .nav a {
-  padding: 10px 10px;
+  padding: 0 2rem 0 2rem;
+  background-color: #0070f3;
+  color: white;
+  font-weight: bold;
 }
 
 .grid {
