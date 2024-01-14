@@ -1,1 +1,13 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+## To Run
+* npm run build
+* npm run dev
+
+currently using Home1 css
+
+## To Do
+
+### secondary pgs
+* add documents
+* style
+
+### deploy
